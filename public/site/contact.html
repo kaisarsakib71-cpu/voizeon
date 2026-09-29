@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>যোগাযোগ ও বুকিং | ধ্বনি স্টুডিও</title>
+<meta name="description" content="ভয়েসওভার প্রজেক্টের জন্য কোট নিন — নিউজ, অ্যাডস, ডকুমেন্টারি, আইভিআর ও অডিওবুক।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+
+<header class="nav">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ধ</span>
+      <span><span class="brand-name">ধ্বনি স্টুডিও</span><span class="brand-sub">Voice Agency</span></span>
+    </a>
+    <div class="nav-links">
+      <a data-nav="home" href="index.html">হোম</a>
+      <a data-nav="artists" href="artists.html">ভয়েস আর্টিস্ট</a>
+      <a data-nav="demos" href="demos.html">ডেমো লাইব্রেরি</a>
+      <a data-nav="upload" href="upload.html">ডেমো আপলোড</a>
+      <a data-nav="contact" href="contact.html">যোগাযোগ</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">ভয়েস বুক করুন</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="মেনু">☰</button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">হোম</a><a href="artists.html">ভয়েস আর্টিস্ট</a><a href="demos.html">ডেমো লাইব্রেরি</a>
+    <a href="upload.html">ডেমো আপলোড</a><a href="contact.html">যোগাযোগ</a><a href="admin.html">অ্যাডমিন</a>
+  </div>
+</header>
+
+<section style="padding:48px 0 0">
+  <div class="wrap">
+    <div class="split-form">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1 class="big">চলুন কথা বলি</h1>
+        <p class="lead mt-1">স্ক্রিপ্ট, ডেডলাইন আর পছন্দের টোন জানান — ৩ ঘণ্টার মধ্যে কাস্টিং শর্টলিস্ট ও কোট পাঠিয়ে দেব।</p>
+
+        <div style="display:grid;gap:14px;margin-top:28px">
+          <div class="info-row"><span class="ic">🏢</span><div><h2>স্টুডিও</h2><p>রোড ১১, বনানী, ঢাকা ১২১৩</p></div></div>
+          <div class="info-row"><span class="ic">✉️</span><div><h2>ইমেইল</h2><p><a href="mailto:hello@dhwanistudio.bd">hello@dhwanistudio.bd</a></p></div></div>
+          <div class="info-row"><span class="ic">📞</span><div><h2>ফোন / হোয়াটসঅ্যাপ</h2><p><a href="tel:+8801700000000">+৮৮ ০১৭০০-০০০০০০</a></p></div></div>
+          <div class="info-row"><span class="ic">🕘</span><div><h2>সময়</h2><p>শনি–বৃহস্পতি, সকাল ১০টা – রাত ৮টা</p></div></div>
+        </div>
+
+        <div style="margin-top:28px;background:var(--olive-950);border-radius:24px;padding:24px;color:var(--olive-200)">
+          <h2 style="font-size:18px;color:var(--olive-50)">আমরা যা যা করি</h2>
+          <div class="tags mt-2">
+            <span class="tag tag-dark">📰 নিউজ ভয়েস</span>
+            <span class="tag tag-dark">📣 অ্যাডস ভয়েস</span>
+            <span class="tag tag-dark">🎞️ ডকুমেন্টারি</span>
+            <span class="tag tag-dark">🎭 ড্রামা / ডাবিং</span>
+            <span class="tag tag-dark">☎️ আইভিআর</span>
+            <span class="tag tag-dark">📚 অডিওবুক</span>
+            <span class="tag tag-dark">🎓 ই-লার্নিং</span>
+            <span class="tag tag-dark">🎙️ পডকাস্ট</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 style="font-size:24px">কোট রিকোয়েস্ট ফর্ম</h2>
+        <p class="muted mt-1">* চিহ্নিত ঘরগুলো অবশ্যই পূরণ করতে হবে।</p>
+        <form id="bookingForm" class="mt-2" novalidate>
+          <p class="alert alert-info" id="bookingArtistNote" style="display:none"></p>
+          <div class="form-grid">
+            <div><label class="lbl">আপনার নাম *</label><input name="name" placeholder="নাম লিখুন"></div>
+            <div><label class="lbl">ইমেইল *</label><input name="email" type="email" placeholder="you@company.com"></div>
+            <div><label class="lbl">ফোন / হোয়াটসঅ্যাপ</label><input name="phone" placeholder="+8801XXXXXXXXX"></div>
+            <div><label class="lbl">প্রতিষ্ঠান</label><input name="company" placeholder="ব্র্যান্ড / এজেন্সি"></div>
+            <div><label class="lbl">প্রজেক্টের ধরন</label><select name="projectType"></select></div>
+            <div><label class="lbl">বাজেট রেঞ্জ</label><select name="budget"></select></div>
+            <div class="full"><label class="lbl">স্ক্রিপ্ট / প্রজেক্ট ডিটেইলস</label><textarea name="message" rows="5" placeholder="ডেলিভারি ডেডলাইন, স্ক্রিপ্টের দৈর্ঘ্য, পছন্দের টোন ইত্যাদি..."></textarea></div>
+          </div>
+          <button class="btn btn-dark mt-2" type="submit">কোট রিকোয়েস্ট পাঠান</button>
+          <div class="form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer grain">
+  <div class="footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark">ধ</span><span class="brand-name">ধ্বনি স্টুডিও</span></div>
+      <p class="mt-2">নিউজ, বিজ্ঞাপন, ডকুমেন্টারি, আইভিআর থেকে অডিওবুক — প্রতিটি প্রজেক্টের জন্য সঠিক কণ্ঠ।</p>
+      <div class="footer-contacts">
+        <a href="mailto:hello@dhwanistudio.bd">hello@dhwanistudio.bd</a>
+        <a href="tel:+8801700000000">+৮৮ ০১৭০০-০০০০০০</a>
+      </div>
+    </div>
+    <div>
+      <h3>ভয়েস ক্যাটাগরি</h3>
+      <ul>
+        <li><a href="demos.html?category=news">📰 নিউজ ভয়েস</a></li>
+        <li><a href="demos.html?category=ads">📣 অ্যাডস ভয়েস</a></li>
+        <li><a href="demos.html?category=documentary">🎞️ ডকুমেন্টারি</a></li>
+        <li><a href="demos.html?category=ivr">☎️ আইভিআর</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>লিংক</h3>
+      <ul>
+        <li><a href="artists.html">সব আর্টিস্ট</a></li>
+        <li><a href="demos.html">ডেমো লাইব্রেরি</a></li>
+        <li><a href="upload.html">ডেমো আপলোড</a></li>
+        <li><a href="admin.html">অ্যাডমিন ড্যাশবোর্ড</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© ২০২৬ ধ্বনি স্টুডিও • বনানী, ঢাকা — সব অধিকার সংরক্ষিত।</div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>অ্যাডমিন ড্যাশবোর্ড | ধ্বনি স্টুডিও</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin">
+
+<header class="nav">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ধ</span>
+      <span><span class="brand-name">ধ্বনি স্টুডিও</span><span class="brand-sub">Voice Agency</span></span>
+    </a>
+    <div class="nav-links">
+      <a data-nav="home" href="index.html">হোম</a>
+      <a data-nav="artists" href="artists.html">ভয়েস আর্টিস্ট</a>
+      <a data-nav="demos" href="demos.html">ডেমো লাইব্রেরি</a>
+      <a data-nav="upload" href="upload.html">ডেমো আপলোড</a>
+      <a data-nav="contact" href="contact.html">যোগাযোগ</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">ভয়েস বুক করুন</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="মেনু">☰</button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">হোম</a><a href="artists.html">ভয়েস আর্টিস্ট</a><a href="demos.html">ডেমো লাইব্রেরি</a>
+    <a href="upload.html">ডেমো আপলোড</a><a href="contact.html">যোগাযোগ</a><a href="admin.html">অ্যাডমিন</a>
+  </div>
+</header>
+
+<section style="padding:48px 0 0">
+  <div class="wrap">
+    <div class="flex-between">
+      <div>
+        <p class="eyebrow">Studio Dashboard</p>
+        <h1 class="big">অ্যাডমিন ড্যাশবোর্ড</h1>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-outline btn-sm" id="exportBtn">⬇ রিকোয়েস্ট এক্সপোর্ট (JSON)</button>
+        <a class="btn btn-dark btn-sm" href="upload.html">⬆ নতুন ডেমো</a>
+      </div>
+    </div>
+
+    <p class="muted mt-2">ℹ️ এই তথ্যগুলো আপনার ব্রাউজারে সংরক্ষিত (কোনো সার্ভার লাগে না)। অন্য ডিভাইস থেকে দেখা যাবে না — তাই গুরুত্বপূর্ণ রিকোয়েস্ট এক্সপোর্ট করে রাখুন।</p>
+
+    <div class="grid grid-4 mt-3">
+      <div class="stat-card"><span class="ic">🎙</span><p class="k">আর্টিস্ট</p><p class="v" id="aArtists">০</p></div>
+      <div class="stat-card"><span class="ic">🎧</span><p class="k">ডেমো ক্লিপ</p><p class="v" id="aDemos">০</p></div>
+      <div class="stat-card"><span class="ic">▶</span><p class="k">মোট প্লে</p><p class="v" id="aPlays">০</p></div>
+      <div class="stat-card"><span class="ic">✉️</span><p class="k">নতুন রিকোয়েস্ট</p><p class="v" id="aNew">০</p></div>
+    </div>
+
+    <h2 class="mt-5" style="font-size:24px">বুকিং রিকোয়েস্ট</h2>
+    <div class="mt-2" id="inquiryList"></div>
+
+    <h2 class="mt-5" style="font-size:24px">ডেমো লাইব্রেরি</h2>
+    <div class="table-wrap mt-2">
+      <table>
+        <thead><tr><th>ডেমো</th><th>আর্টিস্ট</th><th>ক্যাটাগরি</th><th>প্লে</th><th></th></tr></thead>
+        <tbody id="demoRows"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer grain">
+  <div class="footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark">ধ</span><span class="brand-name">ধ্বনি স্টুডিও</span></div>
+      <p class="mt-2">নিউজ, বিজ্ঞাপন, ডকুমেন্টারি, আইভিআর থেকে অডিওবুক — প্রতিটি প্রজেক্টের জন্য সঠিক কণ্ঠ।</p>
+    </div>
+    <div>
+      <h3>ভয়েস ক্যাটাগরি</h3>
+      <ul>
+        <li><a href="demos.html?category=news">📰 নিউজ ভয়েস</a></li>
+        <li><a href="demos.html?category=ads">📣 অ্যাডস ভয়েস</a></li>
+        <li><a href="demos.html?category=documentary">🎞️ ডকুমেন্টারি</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>লিংক</h3>
+      <ul>
+        <li><a href="artists.html">সব আর্টিস্ট</a></li>
+        <li><a href="demos.html">ডেমো লাইব্রেরি</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© ২০২৬ ধ্বনি স্টুডিও • বনানী, ঢাকা — সব অধিকার সংরক্ষিত।</div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

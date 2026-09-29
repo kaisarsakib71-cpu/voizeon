@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ভয়েস ডেমো লাইব্রেরি | ধ্বনি স্টুডিও</title>
+<meta name="description" content="নিউজ ভয়েস, অ্যাডস ভয়েস, ডকুমেন্টারি, আইভিআর, অডিওবুক — সব ক্যাটাগরির ভয়েস ডেমো এক জায়গায় শুনুন।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="demos">
+
+<header class="nav">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ধ</span>
+      <span><span class="brand-name">ধ্বনি স্টুডিও</span><span class="brand-sub">Voice Agency</span></span>
+    </a>
+    <div class="nav-links">
+      <a data-nav="home" href="index.html">হোম</a>
+      <a data-nav="artists" href="artists.html">ভয়েস আর্টিস্ট</a>
+      <a data-nav="demos" href="demos.html">ডেমো লাইব্রেরি</a>
+      <a data-nav="upload" href="upload.html">ডেমো আপলোড</a>
+      <a data-nav="contact" href="contact.html">যোগাযোগ</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">ভয়েস বুক করুন</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="মেনু">☰</button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">হোম</a><a href="artists.html">ভয়েস আর্টিস্ট</a><a href="demos.html">ডেমো লাইব্রেরি</a>
+    <a href="upload.html">ডেমো আপলোড</a><a href="contact.html">যোগাযোগ</a><a href="admin.html">অ্যাডমিন</a>
+  </div>
+</header>
+
+<section style="padding:48px 0 0">
+  <div class="wrap">
+    <p class="eyebrow">Demo Library</p>
+    <h1 class="big">ভয়েস ডেমো লাইব্রেরি</h1>
+    <p class="lead mt-1"><span id="totalClips">০</span> টি ক্লিপ — নিউজ বুলেটিন থেকে রিল ভয়েসওভার পর্যন্ত। প্লে করলে ক্লিপ নিচের প্লেয়ারে চলতে থাকবে।</p>
+
+    <div class="mt-3 filter-box" id="filterBox"></div>
+
+    <div class="flex-between mt-2">
+      <p class="muted" id="demoCount"></p>
+      <a class="btn btn-outline btn-sm" href="upload.html">⬆ নিজের ডেমো আপলোড করুন</a>
+    </div>
+
+    <div class="grid grid-3 mt-2" id="demoGrid"></div>
+
+    <section class="mt-5" style="background:rgba(236,239,217,.7);border-radius:24px;padding:32px">
+      <h2 style="font-size:24px">ক্যাটাগরি অনুযায়ী ব্রাউজ করুন</h2>
+      <div class="tags mt-2" id="catLinks" style="gap:10px"></div>
+    </section>
+  </div>
+</section>
+
+<footer class="footer grain">
+  <div class="footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark">ধ</span><span class="brand-name">ধ্বনি স্টুডিও</span></div>
+      <p class="mt-2">নিউজ, বিজ্ঞাপন, ডকুমেন্টারি, আইভিআর থেকে অডিওবুক — প্রতিটি প্রজেক্টের জন্য সঠিক কণ্ঠ, ২৪ ঘণ্টার মধ্যে ডেলিভারি।</p>
+      <div class="footer-contacts">
+        <a href="mailto:hello@dhwanistudio.bd">hello@dhwanistudio.bd</a>
+        <a href="tel:+8801700000000">+৮৮ ০১৭০০-০০০০০০</a>
+      </div>
+    </div>
+    <div>
+      <h3>ভয়েস ক্যাটাগরি</h3>
+      <ul>
+        <li><a href="demos.html?category=news">📰 নিউজ ভয়েস</a></li>
+        <li><a href="demos.html?category=ads">📣 অ্যাডস ভয়েস</a></li>
+        <li><a href="demos.html?category=documentary">🎞️ ডকুমেন্টারি</a></li>
+        <li><a href="demos.html?category=drama">🎭 ড্রামা / ডাবিং</a></li>
+        <li><a href="demos.html?category=ivr">☎️ আইভিআর</a></li>
+        <li><a href="demos.html?category=audiobook">📚 অডিওবুক</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>লিংক</h3>
+      <ul>
+        <li><a href="artists.html">সব আর্টিস্ট</a></li>
+        <li><a href="upload.html">ডেমো আপলোড করুন</a></li>
+        <li><a href="contact.html">কোট নিন</a></li>
+        <li><a href="admin.html">অ্যাডমিন ড্যাশবোর্ড</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© ২০২৬ ধ্বনি স্টুডিও • বনানী, ঢাকা — সব অধিকার সংরক্ষিত।</div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

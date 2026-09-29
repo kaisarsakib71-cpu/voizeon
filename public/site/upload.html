@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ডেমো আপলোড | ধ্বনি স্টুডিও</title>
+<meta name="description" content="ভয়েস আর্টিস্টরা নিজেদের নিউজ, অ্যাডস বা ডকুমেন্টারি ভয়েস ডেমো যোগ করুন।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="upload">
+
+<header class="nav">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ধ</span>
+      <span><span class="brand-name">ধ্বনি স্টুডিও</span><span class="brand-sub">Voice Agency</span></span>
+    </a>
+    <div class="nav-links">
+      <a data-nav="home" href="index.html">হোম</a>
+      <a data-nav="artists" href="artists.html">ভয়েস আর্টিস্ট</a>
+      <a data-nav="demos" href="demos.html">ডেমো লাইব্রেরি</a>
+      <a data-nav="upload" href="upload.html">ডেমো আপলোড</a>
+      <a data-nav="contact" href="contact.html">যোগাযোগ</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">ভয়েস বুক করুন</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="মেনু">☰</button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">হোম</a><a href="artists.html">ভয়েস আর্টিস্ট</a><a href="demos.html">ডেমো লাইব্রেরি</a>
+    <a href="upload.html">ডেমো আপলোড</a><a href="contact.html">যোগাযোগ</a><a href="admin.html">অ্যাডমিন</a>
+  </div>
+</header>
+
+<section style="padding:48px 0 0">
+  <div class="wrap-sm">
+    <p class="eyebrow">For Artists</p>
+    <h1 class="big">ভয়েস ডেমো আপলোড করুন</h1>
+    <p class="lead mt-1">আপনার সেরা ক্লিপটি যোগ করুন — ডেমো সঙ্গে সঙ্গে লাইব্রেরিতে দেখা যাবে এবং প্লেয়ারে বাজবে।</p>
+
+    <div class="grid grid-3 mt-3">
+      <div class="card card-flat" style="background:rgba(236,239,217,.5)"><div><span style="font-size:20px">🎧</span><h2 style="font-size:16px;margin-top:8px">ক্লিন রেকর্ডিং</h2><p class="muted" style="margin:4px 0 0">ব্যাকগ্রাউন্ড নয়েজ ছাড়া, -৩ dB পিক লেভেলে রাখুন।</p></div></div>
+      <div class="card card-flat" style="background:rgba(236,239,217,.5)"><div><span style="font-size:20px">⏱</span><h2 style="font-size:16px;margin-top:8px">৩০–৯০ সেকেন্ড</h2><p class="muted" style="margin:4px 0 0">একটি ক্লিপে ২–৩টি ভিন্ন টোনের নমুনা রাখুন।</p></div></div>
+      <div class="card card-flat" style="background:rgba(236,239,217,.5)"><div><span style="font-size:20px">🏷</span><h2 style="font-size:16px;margin-top:8px">সঠিক ট্যাগিং</h2><p class="muted" style="margin:4px 0 0">ক্যাটাগরি ও ভাষা ঠিক দিলে ক্লায়েন্ট দ্রুত খুঁজে পাবে।</p></div></div>
+    </div>
+
+    <form id="uploadForm" class="mt-4" novalidate>
+      <fieldset>
+        <legend>১. আর্টিস্ট</legend>
+        <div class="form-grid">
+          <div class="full"><label class="lbl">আর্টিস্ট নির্বাচন করুন</label><select name="artistId"></select></div>
+        </div>
+        <div id="newArtistBox" style="display:none">
+          <div class="form-grid mt-2">
+            <div><label class="lbl">আর্টিস্টের নাম *</label><input name="newArtistName" placeholder="যেমন: রাহুল আহমেদ"></div>
+            <div><label class="lbl">ট্যাগলাইন</label><input name="newArtistTagline" placeholder="উষ্ণ ও বিশ্বাসযোগ্য কণ্ঠ"></div>
+            <div><label class="lbl">শহর</label><input name="newArtistCity" placeholder="ঢাকা"></div>
+            <div><label class="lbl">কণ্ঠের ধরন</label><select name="newArtistGender"><option value="male">পুরুষকণ্ঠ</option><option value="female">নারীকণ্ঠ</option></select></div>
+            <div><label class="lbl">ভাষা (কমা দিয়ে)</label><input name="newArtistLanguages" placeholder="বাংলা, ইংরেজি"></div>
+            <div><label class="lbl">অভিজ্ঞতা (বছর)</label><input name="newArtistExperience" type="number" min="0" max="60" value="2"></div>
+            <div><label class="lbl">রেট / মিনিট (টাকা)</label><input name="newArtistRate" type="number" min="0" step="100" value="2000"></div>
+            <div class="full"><label class="lbl">সংক্ষিপ্ত পরিচিতি</label><textarea name="newArtistBio" rows="3" placeholder="অভিজ্ঞতা, উল্লেখযোগ্য কাজ..."></textarea></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>২. ডেমোর তথ্য</legend>
+        <div class="form-grid">
+          <div class="full"><label class="lbl">ডেমোর শিরোনাম *</label><input name="title" placeholder="যেমন: প্রাইম টাইম নিউজ বুলেটিন"></div>
+          <div><label class="lbl">ক্যাটাগরি *</label><select name="category"></select></div>
+          <div><label class="lbl">ভাষা</label><select name="language"></select></div>
+          <div><label class="lbl">টোন</label><input name="tone" placeholder="গম্ভীর • আত্মবিশ্বাসী"></div>
+          <div><label class="lbl">বর্ণনা</label><input name="description" placeholder="ক্লিপটি কী নিয়ে..."></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>৩. অডিও ফাইল</legend>
+        <label class="dropzone">
+          <span class="big">🎙️</span>
+          <strong>অডিও ফাইল বেছে নিন (mp3, wav, m4a, ogg)</strong>
+          <span class="muted">সর্বোচ্চ ১৫ এমবি • ৩০–৯০ সেকেন্ডের শোরিল সবচেয়ে ভালো</span>
+          <input type="file" name="file" accept="audio/*">
+          <span class="tag tag-leaf" id="fileInfo" style="display:none;margin-top:8px"></span>
+        </label>
+        <p class="muted mt-1">ফাইল না দিলে ক্লিপটি একটি প্লেসহোল্ডার “নমুনা টোন” হিসেবে যুক্ত হবে — পরে আসল রেকর্ডিং যোগ করা যাবে।</p>
+      </fieldset>
+
+      <div class="progress" id="uploadProgress" style="display:none"><div id="uploadFill"></div></div>
+      <button class="btn btn-dark" type="submit">ডেমো পাবলিশ করুন</button>
+      <div id="uploadMsg"></div>
+      <p class="muted mt-2">🔒 আপলোড করা ফাইল এই ব্রাউজারেই নিরাপদে জমা থাকে (কোনো সার্ভার লাগে না)। স্থায়ীভাবে সবার জন্য দেখাতে চাইলে ফাইলটি <code>assets/audio/</code> ফোল্ডারে রেখে <code>assets/js/data.js</code>-এ <code>audioUrl</code> বসিয়ে দিন।</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer grain">
+  <div class="footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark">ধ</span><span class="brand-name">ধ্বনি স্টুডিও</span></div>
+      <p class="mt-2">নিউজ, বিজ্ঞাপন, ডকুমেন্টারি, আইভিআর থেকে অডিওবুক — প্রতিটি প্রজেক্টের জন্য সঠিক কণ্ঠ।</p>
+      <div class="footer-contacts">
+        <a href="mailto:hello@dhwanistudio.bd">hello@dhwanistudio.bd</a>
+        <a href="tel:+8801700000000">+৮৮ ০১৭০০-০০০০০০</a>
+      </div>
+    </div>
+    <div>
+      <h3>ভয়েস ক্যাটাগরি</h3>
+      <ul>
+        <li><a href="demos.html?category=news">📰 নিউজ ভয়েস</a></li>
+        <li><a href="demos.html?category=ads">📣 অ্যাডস ভয়েস</a></li>
+        <li><a href="demos.html?category=documentary">🎞️ ডকুমেন্টারি</a></li>
+        <li><a href="demos.html?category=ivr">☎️ আইভিআর</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>লিংক</h3>
+      <ul>
+        <li><a href="artists.html">সব আর্টিস্ট</a></li>
+        <li><a href="demos.html">ডেমো লাইব্রেরি</a></li>
+        <li><a href="contact.html">কোট নিন</a></li>
+        <li><a href="admin.html">অ্যাডমিন ড্যাশবোর্ড</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© ২০২৬ ধ্বনি স্টুডিও • বনানী, ঢাকা — সব অধিকার সংরক্ষিত।</div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
